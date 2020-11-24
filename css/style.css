@@ -23,10 +23,11 @@ body {
 }
 
 .container {
-  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0;
 }
 
 /*приминяем ко всем спискам*/
@@ -41,10 +42,10 @@ a {
   text-decoration: none;
 }
 
-.section.no-padding {
+/*.section.no-padding {
   padding-top: 0px;
   padding-bottom: 0px;
-}
+}*/
 
 /* Логотип*/
 .logo {
@@ -114,10 +115,17 @@ a {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  margin-top: 94px;
+  margin-bottom: 94px;
 }
-
+.products-title,
+.team-title {
+  padding-bottom: 50px;
+}
+.team-list,
+.product-list {
+  display: inline-block;
+}
 .teammate {
   background-color: #f5f4fa;
 }
@@ -214,10 +222,7 @@ a {
 /*Product*/
 
 /*/////Team/////*/
-.team-list,
-.product-list {
-  display: inline-block;
-}
+
 .teammate-name {
   font-weight: 500;
   font-size: 16px;
