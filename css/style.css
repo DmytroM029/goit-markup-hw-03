@@ -1,0 +1,253 @@
+:root {
+  --primary-text-color: #212121;
+  --title-text-color: #2196f3;
+  --text-color: #757575;
+  --hero-color: #ffffff;
+  --footer-link-color: rgba(255, 255, 255, 0.6);
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*приминяем ко всем спискам*/
+ul {
+  list-style: none;
+}
+
+/*убираем подчёркивание текста*/
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--hero-color);
+  font-family: Roboto, sans-serif;
+}
+
+/* Логотип*/
+.logo {
+  color: var(--title-text-color);
+  font-family: Raleway, cursive;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+.logo-web {
+  color: #000000;
+}
+
+.logo-web:hover,
+.logo-web:focus {
+  color: var(--title-text-color);
+}
+
+.logo-footer {
+  color: #ffffff;
+}
+
+.logo-footer:hover,
+.logo-footer:focus {
+  color: var(--title-text-color);
+}
+
+/*site-nav*/
+.site-nav .link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--title-text-color);
+}
+
+.site-nav .link.current {
+  color: var(--title-text-color);
+}
+
+/*site-auth*/
+.site-auth .auth-link {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.site-auth .auth-link:hover,
+.site-auth .auth-link:focus {
+  color: var(--title-text-color);
+}
+
+/*Общее оформление текста*/
+.section {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.teammate {
+  background-color: #f5f4fa;
+}
+
+/*Hero*/
+.hero-section {
+  background-color: #2f303a;
+}
+
+.hero-title {
+  color: var(--hero-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/*Button*/
+.button {
+  color: var(--hero-color);
+  background-color: var(--title-text-color);
+  font-family: inherit;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+/*Наши преимуества(advantages)*/
+/*.advantages-title {
+  
+}*/
+
+.advantages-list {
+  display: inline-block;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.advantages-title {
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.advantages-content {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+/*Product*/
+
+/*Team*/
+.team-list,
+.product-list {
+  display: inline-block;
+}
+.teammate-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.teammate-position {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/*Footer*/
+.footer {
+  background-color: #2f303a;
+}
+.footer-maps {
+  color: var(--hero-color);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer-link {
+  color: var(--footer-link-color);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+/*portfolio*/
+
+.filter-list {
+  display: inline-block;
+}
+.filter-product {
+  color: var(--primary-text-color);
+}
+
+.filter-button {
+  color: var(--primary-text-color);
+  background-color: #f5f4fa;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.43;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--hero-color);
+  background-color: var(--title-text-color);
+  font-family: inherit;
+}
+
+.filter-experience {
+  color: var(--primary-text-color);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.filter-product {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}
