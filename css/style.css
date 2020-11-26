@@ -316,11 +316,15 @@ a {
   margin-right: 0;
 }
 
+.filter-list:nth-child(-n + 3) {
+  margin-right: 0;
+}
+
 .filter-product {
   color: var(--primary-text-color);
 }
 
-.buttom-lis {
+.filter-buttom-list {
   display: flex;
   justify-content: center;
 }
