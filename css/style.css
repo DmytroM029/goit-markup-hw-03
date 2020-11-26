@@ -74,16 +74,33 @@ a {
   color: var(--title-text-color);
 }
 
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*site-nav*/
+.site-nav {
+  display: flex;
+}
+.site-nav .item + .item /*альтернатива .site-nav .item:not(:last-child), но при использовании :last-child необходимо использовать - margin-right */ {
+  outline: 1px solid red;
+  margin-left: 50px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  margin-top: 32px;
-  margin-bottom: 32px;
 }
+
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--title-text-color);
@@ -94,6 +111,12 @@ a {
 }
 
 /*site-auth*/
+.site-auth {
+  display: flex;
+}
+.site-auth .item  + .item /*альтернатива .site-auth .item:not(:last-child). Только делает последним не правый, а левый элемент (от первого левого, который не учитывается).*/ {
+  margin-left: 50px;
+}
 .site-auth .auth-link {
   color: var(--text-color);
   font-weight: 500;
@@ -182,8 +205,18 @@ a {
 /*///////Наши преимуества(advantages)/////*/
 /*advantages-title {}*/
 
+.advantages-ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-top: -10px;
+  flex-basis: calc(100% / 3 - 10px);
+}
+
 .advantages-list {
   display: inline-block;
+  margin-left: 30px;
+  margin-top: 96px;
 }
 
 .visually-hidden {
