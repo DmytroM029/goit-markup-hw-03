@@ -47,6 +47,13 @@ a {
   padding-bottom: 0px;
 }*/
 
+//////////////////////*ШАПКА*////////////////////
+.html .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* Логотип*/
 .logo {
   color: var(--title-text-color);
@@ -76,14 +83,12 @@ a {
 
 .main-nav {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 /*site-nav*/
-.site-nav {
+.site-nav,
+.logo {
   display: flex;
-  margin-left: 93px;
 }
 .site-nav .item + .item /*альтернатива .site-nav .item:not(:last-child), но при использовании :last-child необходимо использовать - margin-right */ {
   outline: 1px solid red;
@@ -91,9 +96,8 @@ a {
 }
 
 .site-nav .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 
   color: var(--primary-text-color);
   font-weight: 500;
@@ -125,8 +129,11 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  margin-top: 0px;
-  margin-bottom: 213px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: block;
+  /*padding-top: 32px;
+  padding-bottom: 32px;*/
 }
 .site-auth .auth-link:hover,
 .site-auth .auth-link:focus {
@@ -161,6 +168,7 @@ a {
   margin-bottom: 0;
   background-color: #2f303a;
   text-align: center;
+  width: 400px;
 }
 
 .hero-title {
@@ -171,9 +179,9 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 200px 252px;
+  /* padding: 200px 252px;
   padding-bottom: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 30px;*/
 }
 
 /*Button*/
@@ -304,24 +312,12 @@ a {
   margin-bottom: 50px;
 }
 
-.filter-block {
-  display: flex;
-}
-.filter-list {
-  width: 370px;
-  margin-right: 30px;
-}
-
-.filter-list:nth-child(3n) {
-  margin-right: 0;
-}
-
-.filter-list:nth-child(-n + 3) {
-  margin-right: 0;
-}
-
-.filter-product {
-  color: var(--primary-text-color);
+.container-filter {
+  width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .filter-buttom-list {
@@ -346,7 +342,8 @@ a {
   text-align: center;
   padding: 6px 22px;
 }
-.buttom-lis .item + .item {
+
+.filter-buttom-list .item + .item {
   margin-left: 8px;
 }
 
@@ -357,13 +354,26 @@ a {
   font-family: inherit;
 }
 
-.container-filter {
-  width: 1170px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-left: auto;
-  margin-right: auto;
+.filter-block {
+  display: flex;
 }
+.filter-list {
+  width: calc(100%-60px / 3);
+  margin-right: 30px;
+} /*100%строки; 60px- суммарное значение 2 маржинов по 30px каждый в одной строке (2 маржина между 3-х элементов) / 3-количество элементов в строке*/
+.filter-list:nth-child(3n) {
+  margin-right: 0;
+}
+
+/*ИЛИ
+width: 370px;
+  margin-right: 30px;
+}
+.filter-list:nth-child(3n) {
+  margin-right: 0;
+}
+.filter-list:nth-child(-n + 3) {
+  margin-right: 0;*/
 
 .filter-block {
   flex-wrap: wrap;
