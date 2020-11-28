@@ -22,14 +22,6 @@ body {
   margin: 0;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1170px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 /*приминяем ко всем спискам*/
 ul {
   list-style: none;
@@ -41,20 +33,45 @@ ul {
 a {
   text-decoration: none;
 }
-
-/*.section.no-padding {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}*/
-
-//////////////////////*ШАПКА*////////////////////
-.html .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
 }
 
-/* Логотип*/
+img {
+  display: block;
+}
+
+.container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding: 0 15px; /*или padding-left: 15px; padding-right: 15px;*/
+}
+
+/*/////////////////////ШАПКА///////////////////*/
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+}
+.main-nav,
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+/*////////////////LOGO////////////*/
 .logo {
   color: var(--title-text-color);
   font-family: Raleway, cursive;
@@ -62,6 +79,10 @@ a {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+
+.main-nav .logo {
+  margin-right: 93px;
 }
 .logo-web {
   color: #000000;
@@ -72,29 +93,12 @@ a {
   color: var(--title-text-color);
 }
 
-.logo-footer {
-  color: #ffffff;
-}
+/*///////////////SITE-NAV/////////*/
 
-.logo-footer:hover,
-.logo-footer:focus {
-  color: var(--title-text-color);
-}
-
-.main-nav {
-  display: flex;
-}
-
-/*site-nav*/
-.site-nav,
-.logo {
-  display: flex;
-}
-.site-nav .item + .item /*альтернатива .site-nav .item:not(:last-child), но при использовании :last-child необходимо использовать - margin-right */ {
+.site-nav .item + .item /*альтернатива .site-nav .item:not(:last-child), но при использовании :last-child необходимо использовать - margin-right: 50px; */ {
   outline: 1px solid red;
   margin-left: 50px;
 }
-
 .site-nav .link {
   margin-top: 32px;
   margin-bottom: 32px;
@@ -105,17 +109,15 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--title-text-color);
 }
-
 .site-nav .link.current {
   color: var(--title-text-color);
 }
 
-/*site-auth*/
+/*///////////////SITE-AUTH/////////////*/
 .site-auth {
   display: flex;
   margin-left: auto;
@@ -129,11 +131,6 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  display: block;
-  /*padding-top: 32px;
-  padding-bottom: 32px;*/
 }
 .site-auth .auth-link:hover,
 .site-auth .auth-link:focus {
@@ -141,6 +138,7 @@ a {
 }
 
 /*Общее оформление текста*/
+
 .section {
   font-weight: 700;
   font-size: 36px;
@@ -168,7 +166,11 @@ a {
   margin-bottom: 0;
   background-color: #2f303a;
   text-align: center;
-  width: 400px;
+  justify-content: center;
+}
+
+.hero-section .container {
+  display: block;
 }
 
 .hero-title {
@@ -179,9 +181,11 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  /* padding: 200px 252px;
+  width: 696px;
+  justify-content: center;
+  padding: 200px 252px;
   padding-bottom: 0px;
-  margin-bottom: 30px;*/
+  margin-bottom: 30px;
 }
 
 /*Button*/
@@ -285,6 +289,14 @@ a {
 }
 
 /*Footer*/
+.logo-footer {
+  color: #ffffff;
+}
+
+.logo-footer:hover,
+.logo-footer:focus {
+  color: var(--title-text-color);
+}
 .footer {
   background-color: #2f303a;
 }
