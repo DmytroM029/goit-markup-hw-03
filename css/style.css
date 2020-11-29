@@ -46,7 +46,9 @@ p {
 }
 
 img {
-  display: block;
+  display: block; /*убираем зазор в 4 px*/
+  max-width: 100%; /*растягивание не шире, чем оригинальный размер*/
+  height: auto;
 }
 
 .container {
@@ -223,7 +225,7 @@ img {
 /*///////Наши преимуества(advantages)/////*/
 /*advantages-title {}*/
 
-.advantages-ul {
+.advantages-list {
   display: flex;
   margin-left: -10px;
   margin-top: -10px;
@@ -234,7 +236,7 @@ img {
   flex-basis: calc(100% / 3 - 10px);*/
 }
 
-.advantages-list {
+.advantages-list-item {
   display: inline-block;
   margin-left: 30px;
   margin-top: 96px;
@@ -371,25 +373,20 @@ img {
 .footer-address-list .item:not(:last-child) {
   margin-bottom: 9px;
 }
+
 /*/////////////////////portfolio.html////////////////////////*/
 
 /*filter*/
 .filter-section {
-  margin-top: 50px;
   margin-bottom: 50px;
-}
-
-.container-filter-button {
-  width: 1170px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .filter-buttom-list {
   display: flex;
   justify-content: center;
+  margin-top: 94px;
+  margin-bottom: 34px;
+  padding-bottom: 8px;
 }
 
 .filter-button {
@@ -405,9 +402,9 @@ img {
   text-align: center;
   /*outline: 1px solid red;*/
   min-width: 50px;
-  margin-bottom: 50px;
   text-align: center;
   padding: 6px 22px;
+  border-radius: 5px; /*задаёт округление кнопки*/
 }
 
 .filter-buttom-list .item + .item {
@@ -421,30 +418,36 @@ img {
   font-family: inherit;
 }
 
-.filter-block {
-  display: flex;
-}
 .filter-list {
-  width: calc(100%-60px / 3);
-  margin-right: 30px;
-} /*100%строки; 60px- суммарное значение 2 маржинов по 30px каждый в одной строке (2 маржина между 3-х элементов) / 3-количество элементов в строке*/
-.filter-list:nth-child(3n) {
-  margin-right: 0;
+  display: flex;
+  flex-wrap: wrap; /*Позволяем элементам перепрыгивать на другие строки, которые по умолчанию располагаются сверху вниз (вдоль поперечной оси).*/
 }
 
+.card-content {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+}
+
+.filter-list-item {
+  width: calc(
+    100%-60px / 3
+  ); /*Модуль 3. Вебинар №6. Flexbox 1:00:00 (1:16:00)*/
+  margin-bottom: 30px;
+  margin-right: 30px;
+} /*100%строки; 60px- суммарное значение 2 маржинов по 30px каждый в одной строке (2 маржина между 3-х элементов) / 3-количество элементов в строке*/
+
+.filter-list-item:nth-child(3n) {
+  margin-right: 0;
+}
 /*ИЛИ
 width: 370px;
   margin-right: 30px;
 }
-.filter-list:nth-child(3n) {
+.filter-list-item:nth-child(3n) {
   margin-right: 0;
 }
-.filter-list:nth-child(-n + 3) {
+.filter-list-item:nth-child(-n + 3) {
   margin-right: 0;*/
-
-.filter-block {
-  flex-wrap: wrap;
-}
 
 .filter-experience {
   color: var(--primary-text-color);
@@ -452,6 +455,7 @@ width: 370px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 
 .filter-product {
