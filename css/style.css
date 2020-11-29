@@ -20,6 +20,7 @@ body {
   background-color: var(--hero-color);
   font-family: Roboto, sans-serif;
   margin: 0;
+  width: 1600px;
 }
 
 /*приминяем ко всем спискам*/
@@ -62,6 +63,7 @@ img {
 .header {
   padding-top: 32px;
   padding-bottom: 32px;
+  border: 1px solid #ececec;
 }
 .header .container {
   display: flex;
@@ -163,17 +165,19 @@ img {
 
 /*Hero*/
 .hero-section {
-  margin: 0;
+  display: flex;
+  margin: auto;
   margin-bottom: 0;
   background-color: #2f303a;
   text-align: center;
   justify-content: center;
+  width: 1600px;
 }
 
 .hero-section .container {
   display: block;
-  width: 1600px;
-  text-align: center;
+  justify-content: center;
+  text-align: center; /*[HTML+CSS #30] Блочная модель/Flexbox. Q&A (26/11/2020) 1:48:21 https://www.youtube.com/watch?v=GezCqjS6SKo&feature=youtu.be*/
 }
 
 .hero-title {
