@@ -95,7 +95,7 @@ img {
 /*///////////////SITE-NAV/////////*/
 
 .site-nav .item + .item /*альтернатива .site-nav .item:not(:last-child), но при использовании :last-child необходимо использовать - margin-right: 50px; */ {
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
   margin-left: 50px;
 }
 .site-nav .link {
@@ -150,6 +150,13 @@ img {
 .products-title,
 .team-title {
   padding-bottom: 50px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 /*Hero*/
@@ -281,11 +288,16 @@ img {
 /*/////Team/////*/
 
 /*Значение team-title в общем оформлении текста*/
+.team-title {
+  display: inline-block;
+  margin-top: 94px;
+}
 .team-list {
   display: flex;
 }
 .team-list .item {
   display: inline-block;
+  margin-bottom: 90px;
 }
 .team-list .item:not(:last-child) {
   margin-right: 30px;
@@ -309,10 +321,13 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.teammate {
+.team-section {
   background-color: #f5f4fa;
+  margin-bottom: 0px;
 }
-
+.team-list .item {
+  background-color: var(--hero-color);
+}
 /*Footer*/
 .footer {
   padding-top: 60px;
@@ -364,7 +379,7 @@ img {
   margin-bottom: 50px;
 }
 
-.container-filter {
+.container-filter-button {
   width: 1170px;
   padding-right: 15px;
   padding-left: 15px;
