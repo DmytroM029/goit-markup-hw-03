@@ -50,14 +50,13 @@ img {
 }
 
 .container {
-  display: flex;
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
   padding: 0 15px; /*или padding-left: 15px; padding-right: 15px;*/
 }
 
-/*/////////////////////ШАПКА///////////////////*/
+/*/////////////////////HEADER///////////////////*/
 .header {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -71,7 +70,7 @@ img {
   display: flex;
   align-items: center;
 }
-/*////////////////LOGO////////////*/
+/*/ ///////////////LOGO////////////*/
 .logo {
   color: var(--title-text-color);
   font-family: Raleway, cursive;
@@ -171,6 +170,8 @@ img {
 
 .hero-section .container {
   display: block;
+  width: 1600px;
+  text-align: center;
 }
 
 .hero-title {
@@ -181,11 +182,12 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 696px;
-  justify-content: center;
   padding: 200px 252px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+  max-width: 696px;
 }
 
 /*Button*/
@@ -205,8 +207,9 @@ img {
   display: inline-block;
   padding: 10px 32px;
   min-width: 50px;
-  margin-top: 0px;
-  margin-bottom: 187px;
+  margin-top: 30px;
+  margin-bottom: 200px;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -271,7 +274,19 @@ img {
 
 /*Product*/
 
+/*Значение products-title в общем оформлении текста*/
+
+.product-list {
+  display: flex;
+}
+
+.product-list .item + .item {
+  margin-left: 30px;
+}
+
 /*/////Team/////*/
+
+/*Значение team-title в общем оформлении текста*/
 
 .teammate-name {
   font-weight: 500;
