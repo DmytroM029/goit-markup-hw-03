@@ -430,6 +430,7 @@ img {
 .filter-list {
   display: flex;
   flex-wrap: wrap; /*Позволяем элементам перепрыгивать на другие строки, которые по умолчанию располагаются сверху вниз (вдоль поперечной оси).*/
+  justify-content: center;
 }
 
 .card-content {
