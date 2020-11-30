@@ -20,7 +20,8 @@ body {
   background-color: var(--hero-color);
   font-family: Roboto, sans-serif;
   margin: 0;
-  width: 1600px;
+  width: 100%;
+  justify-content: center;
 }
 
 /*приминяем ко всем спискам*/
@@ -171,7 +172,7 @@ img {
   background-color: #2f303a;
   text-align: center;
   justify-content: center;
-  width: 1600px;
+  width: 100%;
 }
 
 .hero-section .container {
@@ -242,8 +243,10 @@ img {
 
 .advantages-list-item {
   display: inline-block;
-  margin-left: 30px;
   margin-top: 96px;
+}
+.advantages-list-item:not(:first-child) {
+  margin-left: 30px;
 }
 
 .visually-hidden {
@@ -277,6 +280,7 @@ img {
   letter-spacing: 0.03em;
   margin-top: 0px;
   margin-bottom: 0px;
+  font-weight: 400;
 }
 
 /*Product*/
@@ -330,6 +334,7 @@ img {
 .team-section {
   background-color: #f5f4fa;
   margin-bottom: 0px;
+  width: 100%;
 }
 .team-list .item {
   background-color: var(--hero-color);
