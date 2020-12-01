@@ -92,10 +92,10 @@ img {
   color: #000000;
 }
 
-.logo-web:hover,
+/*.logo-web:hover,
 .logo-web:focus {
   color: var(--title-text-color);
-}
+}*/
 
 /*///////////////SITE-NAV/////////*/
 
@@ -218,6 +218,8 @@ img {
   margin-top: 30px;
   margin-bottom: 200px;
   cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
 }
 
 .button:hover,
@@ -325,6 +327,7 @@ img {
   margin-bottom: 10px;
 }
 .teammate-position {
+  font-weight: 400;
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.18;
@@ -353,10 +356,10 @@ img {
   color: #ffffff;
 }
 
-.logo-footer-accent:hover,
+/*.logo-footer-accent:hover,
 .logo-footer-accent:focus {
   color: var(--title-text-color);
-}
+}*/
 .footer {
   background-color: #2f303a;
 }
@@ -406,7 +409,6 @@ img {
   line-height: 1.43;
   text-align: center;
   letter-spacing: 0.03em;
-  border: 1px solid transparent;
   display: block;
   text-align: center;
   /*outline: 1px solid red;*/
@@ -414,6 +416,8 @@ img {
   text-align: center;
   padding: 6px 22px;
   border-radius: 5px; /*задаёт округление кнопки*/
+  border: 1px solid transparent;
+  outline: none; /*убираем рамку*/
 }
 
 .filter-buttom-list .item + .item {
@@ -430,7 +434,6 @@ img {
 .filter-list {
   display: flex;
   flex-wrap: wrap; /*Позволяем элементам перепрыгивать на другие строки, которые по умолчанию располагаются сверху вниз (вдоль поперечной оси).*/
-  justify-content: center;
 }
 
 .card-content {
